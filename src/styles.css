@@ -25,7 +25,7 @@ time, mark, audio, video {
 :root {
     --background-color: #FFFFFF;
     --primary-accent: #F6F4EE;
-    --secondary-accent: #ada897;
+    --secondary-accent: rgb(197, 190, 179);
     --text-color: #332d27;
     --highlight-color: #D6C7B0;
     --subtext-color: rgba()
@@ -115,12 +115,6 @@ h1, h2, h3 {
     border-radius: 4px;
 }
 
-/* .main__subtext {
-    font-weight: 400;
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
-
-} */
-
 .main__about-btn {
     border-radius: 4px;
     border: var(--text-color);
@@ -128,6 +122,61 @@ h1, h2, h3 {
     width: 10rem;
     padding: 0.3rem;
     justify-self: center;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    /* right: 0; */
+    background: var(--primary-accent);
+    color: var(--text-color);
+    width: 300px;
+    height: 100vh;
+    transition: right 0.3s ease-in-out;
+    padding: 1rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+.sidebar__btn {
+    padding: 0.4rem;
+    background-color: var(--secondary-accent);
+    border: var(--highlight-color) solid 3px;
+    color: var(--text-color);
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.sidebar__btn--close {
+    background: none;
+    border: none;
+    text-align: left;
+}
+
+.sidebar__socials {
+    display: flex;
+    flex-grow: 1;
+    align-items: end;
+    justify-content: center;
+    margin-bottom: 3rem;
+    gap: 1rem;
+}
+
+.sidebar__social {
+    color: var(--text-color);
+    background: none;
+    height: 50px;
+    border: none;
+}
+
+
+
+@media (min-width: 1024px) {
+    /* Styles for standard desktops */
+
+
 }
 
 
