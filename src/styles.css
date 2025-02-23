@@ -1,0 +1,135 @@
+/* Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500&display=swap');
+
+:root {
+    --background-color: #FFFFFF;
+    --primary-accent: #F6F4EE;
+    --secondary-accent: #ada897;
+    --text-color: #332d27;
+    --highlight-color: #D6C7B0;
+    --subtext-color: rgba()
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    color: var(--text-color);
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+}
+
+h1, h2, h3 {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+}
+
+.header__upper {
+    padding: 1rem;
+    text-align: center;
+    background-color: var(--primary-accent);
+}
+
+.header__hero {
+    padding: 1rem;
+    background-color: var(--background-color);
+    border-top : var(--secondary-accent) solid 2px;
+    border-bottom: var(--secondary-accent) solid 2px;
+    display: grid;
+    grid-template-areas: 
+    'header sidebar-btn'
+    'tagline sidebar-btn';
+}
+
+.header__logo {
+    grid-area: header;
+    font-size: 1.6rem;   
+}
+
+.header__tagline {
+    grid-area: tagline;
+    font-size: 0.8rem;
+    color: var(--secondary-accent);
+}
+
+.header__sidebar-btn {
+    background: none;
+    border: none;
+    grid-area: sidebar-btn;
+    font-size: x-large;
+    justify-self: end
+}
+
+.bg-img {
+    background-image: url("./odin-restaurant-hero.jpg");
+    background-size: cover;
+    background-position: 32%;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    align-items: center;
+}
+
+.main__container {
+    display: grid;
+    gap: 1rem;
+}
+
+.main__header {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+}
+
+.main__subtext {
+    font-weight: 400;
+    background-color: rgba(255, 255, 255, 0.8);
+    justify-self: center;
+    border-radius: 4px;
+}
+
+/* .main__subtext {
+    font-weight: 400;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+
+} */
+
+.main__about-btn {
+    border-radius: 4px;
+    border: var(--text-color);
+    color: var(--text-color);
+    width: 10rem;
+    padding: 0.3rem;
+    justify-self: center;
+}
+
+
+
+
