@@ -31,27 +31,34 @@ time, mark, audio, video {
     --subtext-color: rgba()
 }
 
-body {
-    font-family: 'Inter', sans-serif;
-    font-weight: 300;
-    color: var(--text-color);
-    margin: 0;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
-}
-
 h1, h2, h3 {
     font-family: 'DM Serif Display', serif;
     font-weight: 400;
     letter-spacing: -0.5px;
 }
 
+.active {
+    display: flex;
+}
+
+.inactive {
+    display: none;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+}
+
 .header__upper {
     padding: 1rem;
     text-align: center;
     background-color: var(--primary-accent);
+    font-weight: 500;
 }
 
 .header__hero {
@@ -81,7 +88,7 @@ h1, h2, h3 {
     border: none;
     grid-area: sidebar-btn;
     font-size: x-large;
-    justify-self: end
+    justify-self: end;
 }
 
 .bg-img {
@@ -94,11 +101,9 @@ h1, h2, h3 {
     display: grid;
     grid-template-columns: 1fr;
     text-align: center;
-    align-items: center;
-}
-
-.main__container {
-    display: grid;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
     gap: 1rem;
 }
 
@@ -111,7 +116,6 @@ h1, h2, h3 {
 .main__subtext {
     font-weight: 400;
     background-color: rgba(255, 255, 255, 0.8);
-    justify-self: center;
     border-radius: 4px;
 }
 
@@ -119,9 +123,10 @@ h1, h2, h3 {
     border-radius: 4px;
     border: var(--text-color);
     color: var(--text-color);
-    width: 10rem;
     padding: 0.3rem;
-    justify-self: center;
+    width: 50%;
+    min-width: 150px;
+    max-width: 300px;
 }
 
 .sidebar {
@@ -136,7 +141,7 @@ h1, h2, h3 {
     transition: right 0.3s ease-in-out;
     padding: 1rem;
     gap: 1rem;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
   }
 
@@ -170,8 +175,6 @@ h1, h2, h3 {
     height: 50px;
     border: none;
 }
-
-
 
 @media (min-width: 1024px) {
     /* Styles for standard desktops */
