@@ -107,20 +107,20 @@ body {
     gap: 1rem;
 }
 
-.main__header {
+.main__home-header {
     font-size: 1.5rem;
     font-weight: 400;
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
 }
 
-.main__subtext {
+.main__home-subtext {
     font-weight: 400;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 4px;
     width: 100%;
 }
 
-.main__about-btn {
+.main__home-about-btn {
     border-radius: 4px;
     border: var(--text-color);
     color: var(--text-color);
