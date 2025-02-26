@@ -11,18 +11,51 @@
         <section class="header__hero">
             <h1 class="header__logo">Odin Restaurant</h1>
             <span class="header__tagline">Eating beautiful...or something</span>
-            <button class="header__sidebar-btn">
+            <button id="sidebarBtn" class="header__sidebar-btn">
                 ☰
             </button>
         </section>
     </header>
-    <main id="main" class="main bg-img">
-        <!-- <h2 class="main__home-header">We pride ourself on having a nice looking restaurant</h2>
-        <p class="main__home-subtext">The food is alright too, I guess... Like it aint amazing, but it'll do. Our chef is kind of mid tho so don't expect much.</p>
-        <button class="main__home-about-btn">About</button> -->
+    <main id="main" class="main">
+        <div class="main__course-container">
+            <div class="course-block">
+                    <h2 class="course-block__course-name">Starters</h2>
+                    <label for="startersRowCheckbox">
+                        <input type="checkbox" id="startersRowCheckbox">
+                    </label>
+                <div class="course-block__course-items">
+                    <div class="course-item">
+                        <h3 class="course-item__name">Goat Cheese & Beetroot Salad</h3>
+                        <span class="course-item__price">6.95</span>
+                        <span class="course-item__calories">270 kcal</span>
+                        <span class="course-item__diet">vegetarian</span>
+                        <p class="course-item__description">Fresh arugula, roasted beetroot, and creamy goat cheese with a balsamic glaze.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main__course-container">
+            <div class="course-block">
+                    <h2 class="course-block__course-name">Mains</h2>
+                    <label for="mainsRowCheckbox">
+                        <input type="checkbox" id="mainsRowCheckbox">
+                    </label>
+                <div class="course-block__course-items">
+                    <div class="course-item">
+                        <h3 class="course-item__name">Pan-Seared Salmon</h3>
+                        <span class="course-item__price">14.95</span>
+                        <span class="course-item__calories">650 kcal</span>
+                        <span class="course-item__diet"></span>
+                        <p class="course-item__description">Fresh salmon fillet with lemon butter sauce, served with asparagus and mashed potatoes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
-    <aside class="sidebar">
-        <button class="sidebar__btn sidebar__btn--close">
+    <aside id="sidebar" class="sidebar">
+        <button id="sidebarCloseBtn" class="sidebar__btn sidebar__btn--close">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
                 <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
@@ -46,6 +79,7 @@
         </div>
 
     </aside>
+    <script type="module" src="./restaurant_menu_updated.json"></script>
 </body>
 </html>
 
