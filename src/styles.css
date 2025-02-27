@@ -132,14 +132,71 @@ body {
 
 /* Change to menu-layout */
 .main {
-    display: grid;
+    background-color: var(--highlight-color);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.main__course-container {
+    width: 90%;
+}
+
+.course-block__course-name {
+    font-size: 2rem;
 }
 
 .course-block {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr;
+    gap: 1rem;
 }
+
+
+
+.course-block__course-items {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.course-item {
+    background-color: var(--background-color);
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px gray;
+    display: grid;
+    grid-template-columns: repeat(3, auto) 1fr;
+    gap: 1.5rem;
+    padding: 1rem;
+    align-items: center;
+}
+
+.course-item__name {
+    font-size: 1.2rem;
+    grid-column: 1/-1;
+}
+
+.course-item__price {
+    font-weight: 400;
+}
+
+.course-item__calories {
+    font-size: 0.7rem;
+}
+
+.course-item__diet {
+    font-size: 0.8rem;
+}
+
+.course-item__description {
+    grid-column: 1/-1;
+}
+
+
 
 .sidebar {
     position: fixed;
