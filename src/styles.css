@@ -97,6 +97,11 @@ body {
     background-position: 32%;
 }
 
+.main {
+    background-color: var(--highlight-color);
+    overflow: auto;
+}
+
 .home-layout {
     display: grid;
     grid-template-columns: 1fr;
@@ -130,16 +135,13 @@ body {
     max-width: 300px;
 }
 
-/* Change to menu-layout */
 .menu-layout {
-    background-color: var(--highlight-color);
     display: flex;
     flex-direction: column;
     padding: 1rem;
     gap: 1.5rem;
     align-items: center;
-    overflow: auto;
-    height: 100%;
+    align-content: center;
 }
 
 .course-container {
@@ -252,7 +254,6 @@ body {
     /* Styles for standard desktops */
     body {
         grid-template-columns: auto 1fr;
-        grid-template-rows: auto 1fr;
     }
 
     .header {
@@ -288,6 +289,8 @@ body {
     .main {
         grid-row: span 2;
     }
+
+
 
 }
 
