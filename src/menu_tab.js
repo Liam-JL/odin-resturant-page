@@ -1,6 +1,6 @@
 export function constructMenu(parent, menu = {}) {
-    parent.classList.add("manu-layout");
-    parent.classList.remove("bg-img");
+    
+    parent.classList.add("menu-layout")
 
     for(const course of Object.keys(menu)) {
         console.log(course)

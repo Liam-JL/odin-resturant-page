@@ -10,10 +10,12 @@ class Controller {
         this.main = document.getElementById("main");
         this.sidebar = document.getElementById("sidebar");
         this.sidebarCloseBtn = document.getElementById("sidebarCloseBtn");
+        this.menuBtn = document.getElementById("menuBtn");
 
         //Event Listeners
         this.sidebarBtn.addEventListener("click", this.onSidebarBtn.bind(this));
         this.sidebarCloseBtn.addEventListener("click", this.onSidebarCloseBtn.bind(this));
+        this.menuBtn.addEventListener("click", this.onMenuBtn.bind(this));
     }
 
     #clearChildren (parent) {
@@ -23,13 +25,22 @@ class Controller {
         }
     }
 
+    #removeClasses(parent) {
+        const parentClasses = [...parent.getAttribute("class").split(" ")];
+        const mainIndex = parentClasses.indexOf("main");
+        parentClasses.splice(mainIndex, 1); //remove everything except main class
+        parent.classList.remove(...parentClasses);
+    }
+
     renderHome() {
         this.#clearChildren(this.main);
+        this.#removeClasses(this.main);
         constructHome(this.main);
     }
 
     renderMenu() {
         this.#clearChildren(this.main);
+        this.#removeClasses(this.main);
         constructMenu(this.main, menu);
     }
 
@@ -40,6 +51,13 @@ class Controller {
     onSidebarCloseBtn() {
         this.sidebar.classList.remove("active")
     }
+
+    onMenuBtn() {
+        this.renderMenu();
+        this.sidebar.classList.remove("active")
+    }
+
+        
 
 }
 
