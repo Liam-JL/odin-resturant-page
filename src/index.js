@@ -1,8 +1,7 @@
 import "./styles.css";
 import { constructHome } from "./home";
 import {menu}  from './restaurant_menu'
-
-console.log(menu.starters)
+import { constructMenu } from "./menu_tab";
 
 class Controller {
     constructor() {
@@ -29,6 +28,11 @@ class Controller {
         constructHome(this.main);
     }
 
+    renderMenu() {
+        this.#clearChildren(this.main);
+        constructMenu(this.main, menu);
+    }
+
     onSidebarBtn() {
         this.sidebar.classList.add("active")
     }
@@ -40,8 +44,10 @@ class Controller {
 }
 
 const controller = new Controller();
-// window.addEventListener("load", () => {
-//     controller.renderHome();
-// });
+window.addEventListener("load", () => {
+    controller.renderHome();
+});
+
+
 
 
