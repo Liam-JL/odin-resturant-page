@@ -2,10 +2,12 @@ import "./styles.css";
 import { constructHome } from "./home";
 import {menu}  from './restaurant_menu'
 import { constructMenu } from "./menu_tab";
+import { constructAbout } from "./about_tab";
 
 class Controller {
     constructor() {
         //Cashe DOM
+        this.logo = document.getElementById("logo");
         this.sidebarBtn = document.getElementById("sidebarBtn");
         this.main = document.getElementById("main");
         this.sidebar = document.getElementById("sidebar");
@@ -13,6 +15,7 @@ class Controller {
         this.menuBtn = document.getElementById("menuBtn");
 
         //Event Listeners
+        this.logo.addEventListener("click", this.onLogo.bind(this));
         this.sidebarBtn.addEventListener("click", this.onSidebarBtn.bind(this));
         this.sidebarCloseBtn.addEventListener("click", this.onSidebarCloseBtn.bind(this));
         this.menuBtn.addEventListener("click", this.onMenuBtn.bind(this));
@@ -44,6 +47,17 @@ class Controller {
         constructMenu(this.main, menu);
     }
 
+    renderAbout() {
+        this.#clearChildren(this.main);
+        this.#removeClasses(this.main);
+
+    }
+
+    onLogo() {
+        this.renderHome();
+        this.sidebar.classList.remove("active")
+    }
+
     onSidebarBtn() {
         this.sidebar.classList.add("active")
     }
@@ -57,14 +71,12 @@ class Controller {
         this.sidebar.classList.remove("active")
     }
 
-        
-
 }
 
 const controller = new Controller();
-window.addEventListener("load", () => {
-    controller.renderHome();
-});
+// window.addEventListener("load", () => {
+//     controller.renderAbout();
+// });
 
 
 

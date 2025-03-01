@@ -77,6 +77,10 @@ body {
     font-size: 1.6rem;   
 }
 
+.header__logo:hover {
+    cursor: pointer;
+}
+
 .header__tagline {
     grid-area: tagline;
     font-size: 0.8rem;
@@ -250,6 +254,10 @@ body {
     border: none;
 }
 
+.about-layout {
+    
+}
+
 @media (min-width: 1024px) {
     /* Styles for standard desktops */
     body {
@@ -289,6 +297,8 @@ body {
     .main {
         grid-row: span 2;
     }
+
+
 
 
 
