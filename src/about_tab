@@ -1,5 +1,0 @@
-export function constructAbout(parent) {
-    parent.classList.add("about-layout");
-
-    
-}
