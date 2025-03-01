@@ -104,6 +104,7 @@ body {
 .main {
     background-color: var(--highlight-color);
     overflow: auto;
+    height: 100vh;
 }
 
 .home-layout {
@@ -255,8 +256,28 @@ body {
 }
 
 .about-layout {
-    
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
 }
+
+.about__title {
+    font-size: 1.5rem;
+}
+.about-header {
+    font-size: 1.2rem;
+}
+
+.about-info {
+    text-align: center;
+}
+
+.about-info__address {
+    margin-top: 1rem;
+}
+
+
 
 @media (min-width: 1024px) {
     /* Styles for standard desktops */
@@ -288,6 +309,7 @@ body {
 
     .sidebar {
         position: static;
+        height: auto;
     }
 
     .sidebar__btn--close {

@@ -13,12 +13,14 @@ class Controller {
         this.sidebar = document.getElementById("sidebar");
         this.sidebarCloseBtn = document.getElementById("sidebarCloseBtn");
         this.menuBtn = document.getElementById("menuBtn");
+        this.aboutBtn = document.getElementById("aboutBtn")
 
         //Event Listeners
         this.logo.addEventListener("click", this.onLogo.bind(this));
         this.sidebarBtn.addEventListener("click", this.onSidebarBtn.bind(this));
         this.sidebarCloseBtn.addEventListener("click", this.onSidebarCloseBtn.bind(this));
         this.menuBtn.addEventListener("click", this.onMenuBtn.bind(this));
+        this.aboutBtn.addEventListener("click", this.onAboutBtn.bind(this));
     }
 
     #clearChildren (parent) {
@@ -50,7 +52,7 @@ class Controller {
     renderAbout() {
         this.#clearChildren(this.main);
         this.#removeClasses(this.main);
-
+        constructAbout(this.main);
     }
 
     onLogo() {
@@ -71,12 +73,17 @@ class Controller {
         this.sidebar.classList.remove("active")
     }
 
+    onAboutBtn() {
+        this.renderAbout();
+        this.sidebar.classList.remove("active")
+    }
+
 }
 
 const controller = new Controller();
-// window.addEventListener("load", () => {
-//     controller.renderAbout();
-// });
+window.addEventListener("load", () => {
+    controller.renderHome();
+});
 
 
 
